@@ -19,3 +19,9 @@ Install Chrome Extension of [Knoman](https://chrome.google.com/webstore/detail/k
 related searches and/or websites visited.
 * **Searches**: Derived from search engine query or set manually.
 * **Websites**: URL of the visited websites.
+
+### Steps
+
+* Install Extension
+* Take Notes
+* Manage Knowledge
