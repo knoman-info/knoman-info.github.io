@@ -1,0 +1,281 @@
+
+/* ========== DARK MODE THEME ========== */
+:root,
+[data-md-color-scheme="slate"] {
+  /* Backgrounds & text */
+  --md-default-bg-color:   #0e1624;   /* page bg (very dark blue) */
+  --md-default-fg-color:   #e9edf4;   /* main text */
+  --md-typeset-color:      var(--md-default-fg-color);
+  --md-code-bg-color:      #0b1220;   /* code block bg */
+  --md-code-fg-color:      #ffefa7;   /* code text = warm cream for contrast */
+  --md-shadow-z2:          0 0 0 1px rgba(255,255,255,.06), 0 6px 24px rgba(0,0,0,.35);
+
+  /* Header / primary bar (Material uses these) */
+  --md-primary-fg-color:   #cfe1ff;   /* header text/icon color (light for contrast) */
+  --md-primary-bg-color:   #0f1a2a;   /* header bg */
+  --md-accent-fg-color:    #9aa8ff;   /* accent (links/buttons focus) */
+
+  /* Links */
+  --md-typeset-a-color:    #a8b6ff;   /* base link */
+  --md-accent-fg-color--transparent: rgba(154,168,255,.14);
+
+  /* Borders & subtle surfaces */
+  --border-soft:           #23324a;
+  --surface-soft:          #141e31;
+
+  /* Tables */
+  --md-table-bg-color:     var(--surface-soft);
+  --md-table-header-color: #d5def0;   /* th text */
+  --md-table-border-color: var(--border-soft);
+
+  /* Admonitions (info/note/tip) */
+  --md-admonition-fg-color: #e9edf4;
+  --md-admonition-bg-color: #122036;
+
+  /* Custom brand accents (optional, used below) */
+  --dao-indigo:  #6366f1;
+  --dao-violet:  #8b5cf6;
+  --dao-magenta: #ec4899;
+}
+
+
+/* Content area & cards */
+[data-md-color-scheme="slate"] .md-content,
+[data-md-color-scheme="slate"] .md-typeset {
+  color: var(--md-default-fg-color);
+}
+[data-md-color-scheme="slate"] .md-typeset code,
+[data-md-color-scheme="slate"] .md-typeset pre code {
+  color: var(--md-code-fg-color);
+  background-color: var(--md-code-bg-color);
+}
+[data-md-color-scheme="slate"] .md-typeset pre {
+  background: var(--md-code-bg-color);
+  border: 1px solid var(--border-soft);
+}
+
+/* Links & hovers */
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: var(--md-typeset-a-color);
+}
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: #c7cffd;
+  text-decoration-color: currentColor;
+}
+
+/* Table polish */
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+  background: var(--md-table-bg-color);
+  border-color: var(--md-table-border-color);
+}
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  color: var(--md-table-header-color);
+  background: #152239;
+}
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
+  border-top: 1px solid var(--md-table-border-color);
+}
+
+/* Admonitions */
+[data-md-color-scheme="slate"] .md-typeset .admonition,
+[data-md-color-scheme="slate"] .md-typeset details {
+  color: var(--md-admonition-fg-color);
+  background: var(--md-admonition-bg-color);
+  border-color: var(--border-soft);
+}
+
+/* Mermaid readability on dark */
+[data-md-color-scheme="slate"] .mermaid {
+  color: var(--md-default-fg-color);
+}
+
+/* Header & navigation */
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: var(--md-primary-bg-color);
+  color: var(--md-primary-fg-color);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+[data-md-color-scheme="slate"] .md-header__button,
+[data-md-color-scheme="slate"] .md-icon,
+[data-md-color-scheme="slate"] .md-header a {
+  color: var(--md-primary-fg-color) !important;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link {
+  color: var(--md-primary-fg-color) !important;
+  opacity: 0.95;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link:hover,
+[data-md-color-scheme="slate"] .md-tabs__link:focus {
+  color: #ffffff !important;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link--active,
+[data-md-color-scheme="slate"] .md-tabs__item--active .md-tabs__link {
+  color: #ffffff !important;
+  box-shadow: inset 0 -2px 0 var(--md-accent-fg-color);
+}
+
+
+/* ---- Breadcrumbs in dark mode (center top line: "Home / …") ---- */
+[data-md-color-scheme="slate"] .md-breadcrumbs,
+[data-md-color-scheme="slate"] .md-breadcrumbs__item,
+[data-md-color-scheme="slate"] .md-breadcrumbs__link {
+  color: var(--md-default-fg-color) !important;   /* readable */
+  opacity: 0.95;
+}
+
+[data-md-color-scheme="slate"] .md-breadcrumbs__link:hover,
+[data-md-color-scheme="slate"] .md-breadcrumbs__link:focus {
+  color: #ffffff !important;
+  text-decoration-color: currentColor;
+}
+
+/* Breadcrumb separator (chevron) */
+[data-md-color-scheme="slate"] .md-breadcrumbs__item .md-icon,
+[data-md-color-scheme="slate"] .md-breadcrumbs__item .md-icon svg {
+  color: var(--md-default-fg-color) !important;
+  fill:  var(--md-default-fg-color) !important;
+  opacity: 0.9;
+}
+
+
+/* ========== LIGHT MODE THEME ========== */
+:root,
+[data-md-color-scheme="default"] {
+  --md-default-bg-color:   #ffffff;
+  --md-default-fg-color:   #0c1422;
+  --md-typeset-color:      var(--md-default-fg-color);
+  --md-code-bg-color:      #f5f7fb;
+  --md-code-fg-color:      #1a2b4a;
+
+  --md-primary-fg-color:   #1b2a46;   /* header text */
+  --md-primary-bg-color:   #eef2fb;   /* header bg (very light) */
+  --md-accent-fg-color:    #5b60f0;   /* links/buttons */
+
+  --md-typeset-a-color:    #4f56f0;
+
+  --border-soft:           #d9e0ee;
+  --surface-soft:          #f6f8fc;
+
+  --md-table-bg-color:     var(--surface-soft);
+  --md-table-header-color: #1b2a46;
+  --md-table-border-color: var(--border-soft);
+
+  --md-admonition-fg-color:#0c1422;
+  --md-admonition-bg-color:#eef3ff;
+
+  --dao-indigo:  #6366f1;
+  --dao-violet:  #8b5cf6;
+  --dao-magenta: #ec4899;
+}
+
+[data-md-color-scheme="default"] .md-header,
+[data-md-color-scheme="default"] .md-tabs {
+  background-color: var(--md-primary-bg-color);
+  color:            var(--md-primary-fg-color);
+}
+[data-md-color-scheme="default"] .md-header__button,
+[data-md-color-scheme="default"] .md-icon {
+  color: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="default"] .md-typeset pre {
+  background: var(--md-code-bg-color);
+  border: 1px solid var(--border-soft);
+}
+
+[data-md-color-scheme="default"] .md-typeset a { color: var(--md-typeset-a-color); }
+[data-md-color-scheme="default"] .md-typeset a:hover { color: #2b33fa; }
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) {
+  background: var(--md-table-bg-color);
+  border-color: var(--md-table-border-color);
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) th {
+  color: var(--md-table-header-color);
+  background: #eaf0ff;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) td {
+  border-top: 1px solid var(--md-table-border-color);
+}
+
+[data-md-color-scheme="default"] .md-typeset .admonition,
+[data-md-color-scheme="default"] .md-typeset details {
+  color: var(--md-admonition-fg-color);
+  background: var(--md-admonition-bg-color);
+  border-color: #cfe0ff;
+}
+
+/* Mermaid on light */
+[data-md-color-scheme="default"] .mermaid {
+  color: var(--md-default-fg-color);
+}
+
+/* Optional: gradient headings (kept accessible) */
+.md-typeset h1 strong,
+.md-typeset h2 strong {
+  background: linear-gradient(90deg, var(--dao-indigo), var(--dao-violet), var(--dao-magenta));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* ========== TYPOGRAPHY & BRANDING ========== */
+:root {
+  --md-text-font: "Lora", ui-serif, Georgia, serif;
+  --md-code-font: "Fira Code", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+
+/* Subtle resonance underline on nav title */
+.md-nav__title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 0.25rem;
+  background: linear-gradient(90deg, var(--dao-indigo), var(--dao-magenta));
+  opacity: .6;
+}
+
+/* Buttons & callouts pop */
+.md-button,
+.md-typeset .md-button {
+  border-radius: 999px;
+}
+
+/* Mermaid sizing + responsiveness */
+.mermaid {
+  max-width: 100%;
+}
+
+/* Logo sizing and centering */
+.md-header__button.md-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.md-header__button.md-logo img,
+.md-logo img {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Hide logo on mobile */
+@media screen and (max-width: 76.1875em) {
+  .md-header__button.md-logo {
+    display: none;
+  }
+}
+
+/* Optional: glassy header/footer */
+.md-header, .md-footer {
+  backdrop-filter: blur(8px);
+}
+
+

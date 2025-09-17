@@ -1,0 +1,86 @@
+site_name: Knoman
+site_description: "Konman - Personal Knowledge Manage"
+site_url: https://knoman-info.github.io
+#repo_url: https://github.com/knoman-info/knoman-info.github.io
+copyright:
+  '© 2025 knoman.info'
+
+theme:
+  name: material
+  language: en
+  #custom_dir: docs/overrides
+  features:
+    - navigation.tabs
+    # - navigation.sections
+    - navigation.top
+    - content.code.copy
+    # - content.action.edit
+    - search.suggest
+    - search.share
+  palette:
+    ## Default (auto-switch with OS)
+    #- media: "(prefers-color-scheme: light)"
+    #  scheme: default
+    #  primary: indigo
+    #  accent: purple
+    #- media: "(prefers-color-scheme: dark)"
+    #  scheme: slate
+    #  primary: indigo
+    #  accent: purple
+    - scheme: slate           # 🌌 primary scheme (dark)
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/white-balance-sunny
+        name: Switch to light mode
+    - scheme: default         # ☀️ secondary scheme (light)
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode    
+  logo: assets/logo.svg           # put a simple mark here (optional)
+  favicon: assets/logo-48.png     # 512x512 png
+
+nav:
+  - Home: index.md
+  - Philosophy:
+      - Vision: philosophy.md
+  - Extension:
+      - Knoman →: https://chrome.google.com/webstore/detail/knoman/pkjiiacndminmhofjeggfkbheibkaeag
+
+extra:
+  #social:
+  #  - icon: fontawesome/brands/github
+  #    link: https://github.com/daofa-one
+  #  - icon: fontawesome/brands/linkedin
+  #    link: https://www.linkedin.com/
+  #  - icon: fontawesome/brands/x-twitter
+  #    link: https://twitter.com/
+  generator: false
+
+plugins:
+  - search
+  # - privacy   # uncomment if you add mkdocs-privacy for external embeds
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
+extra_css:
+  - assets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js
