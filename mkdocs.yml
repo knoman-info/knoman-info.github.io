@@ -46,6 +46,7 @@ nav:
   - Home: index.md
   - Philosophy:
       - Vision: philosophy.md
+  - Privacy: privacy.md
   - Extension:
       - Knoman →: https://chrome.google.com/webstore/detail/knoman/pkjiiacndminmhofjeggfkbheibkaeag
 
